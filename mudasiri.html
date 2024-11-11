@@ -1,0 +1,19 @@
+<form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="submit" value="Submit">
+    <link rel="stylesheet" href="form.css"> <!-- Link to CSS file -->
+</form>
+<p id="demo"></p>
+
+<script>
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        if (name == "") {
+            document.getElementById("demo").innerHTML = "Name is required.";
+            return false;
+        } else {
+            document.getElementById("demo").innerHTML = "Form submitted!";
+            return true;
+        }
+    }
+</script>
